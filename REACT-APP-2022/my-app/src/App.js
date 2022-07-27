@@ -8,6 +8,7 @@ function App() {
     <div>
       <p>testing</p>
       <p>work from home</p>
+      <p>locally merging</p>
       <Home />
     </div>
   )
