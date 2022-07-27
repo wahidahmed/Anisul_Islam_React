@@ -7,6 +7,7 @@ function App() {
   return (
     <div>
       <p>testing</p>
+      <p>work from home</p>
       <Home />
     </div>
   )
