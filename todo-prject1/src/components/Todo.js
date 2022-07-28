@@ -6,13 +6,31 @@ const Todo = (props) => {
     const {id,title,desc}=props.todo;
   return (
     <article>
-        <div>
-            <h3>{title}</h3>
-            <p>{desc}</p>
+        <div className='container mt-2 bg-success'>
+           
+                
+                <Card>
+                    <div className='row bg-info'>
+                        <div className='col-8'>
+                        <Card.Header>{title}</Card.Header>
+                        <Card.Body>{desc}</Card.Body>
+                    
+                        </div>
+                        <div className='col-4'>
+                            <Card.Footer>
+                            <Button size="sm" variant='danger'><i className='fa fa-trash fa-2x'></i></Button> 
+                            </Card.Footer>
+                      
+                        </div>
+                    </div>
+                   
+                    
+                </Card>
+                
+           
+        
         </div>
-        <div>
-            <i className='fa fa-trash fa-2x'></i>
-        </div>
+        
     </article>
   )
 }
