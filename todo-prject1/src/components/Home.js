@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Todos from './Todos';
+
 const dumyTodos=[
     {
         id:1,
@@ -16,7 +18,7 @@ const dumyTodos=[
 const Home = () => {
   return (
     <div>
-      Home
+      <Todos todosList={dumyTodos}/>
     </div>
   )
 }
