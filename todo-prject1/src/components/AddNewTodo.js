@@ -4,13 +4,13 @@ import React, { useState } from 'react';
 const AddNewTodo = (props) => {
 
     
-    const [todo,setTodo]=useState({id:0,title:'',desc:''});
+    const [todo,setTodo]=useState({title:'',desc:''});
 
     const {title,desc}=todo;
 
     const fnSubmit=(e)=>{
         e.preventDefault();
-        console.log(todo);
+        console.log('todo',todo);
         props.onAddNewTodo(todo);
         setTodo({title:'',desc:''});
     }

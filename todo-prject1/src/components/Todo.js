@@ -3,7 +3,12 @@ import { Card } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 
 const Todo = (props) => {
-    const {id,title,desc}=props.todo;
+    const {title,desc}=props.todo;
+    const {id}=props;
+
+    const fnDelete=(id)=>{
+       props.onDeleteTodo(id);
+    }
   return (
     <article>
         <div className=''>
@@ -18,7 +23,7 @@ const Todo = (props) => {
                         </div>
                         <div className='col-4'>
                             <Card.Footer>
-                                <Button size="sm" variant='danger'><i className='fa fa-trash fa-2x'></i></Button> 
+                                <Button size="sm" variant='danger' onClick={()=>{fnDelete(id)}}><i className='fa fa-trash fa-2x'></i></Button> 
                             </Card.Footer>
                       
                         </div>
